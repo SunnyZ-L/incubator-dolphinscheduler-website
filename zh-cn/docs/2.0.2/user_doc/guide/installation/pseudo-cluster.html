@@ -43,11 +43,8 @@ echo &quot;dolphinscheduler&quot; | passwd --stdin dolphinscheduler
 sed -i &#x27;$adolphinscheduler  ALL=(ALL)  NOPASSWD: NOPASSWD: ALL&#x27; /etc/sudoers
 sed -i &#x27;s/Defaults    requirett/#Defaults    requirett/g&#x27; /etc/sudoers
 <span class="hljs-meta">
-#</span><span class="bash"> 将下载好 DolphinScheduler 二进制包解压到指定目录，比如创建 /opt/dolphinscheduler，并重命名解压后的文件名</span>
-tar -zxvf apache-dolphinscheduler-2.0.2-bin.tar.gz -C /opt/dolphinscheduler
-mv apache-dolphinscheduler-2.0.2-bin  dolphinscheduler-bin
-<span class="hljs-meta">#</span><span class="bash"> 修改目录权限，使得部署用户对 dolphinscheduler-bin 目录有操作权限</span>
-chown -R dolphinscheduler:dolphinscheduler dolphinscheduler-bin
+#</span><span class="bash"> 修改目录权限，使得部署用户对二进制包解压后的 apache-dolphinscheduler-*-bin 目录有操作权限</span>
+chown -R dolphinscheduler:dolphinscheduler apache-dolphinscheduler-*-bin
 </code></pre>
 <blockquote>
 <p><strong><em>注意:</em></strong></p>

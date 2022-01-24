@@ -43,11 +43,8 @@ echo &quot;dolphinscheduler&quot; | passwd --stdin dolphinscheduler
 sed -i &#x27;$adolphinscheduler  ALL=(ALL)  NOPASSWD: NOPASSWD: ALL&#x27; /etc/sudoers
 sed -i &#x27;s/Defaults    requirett/#Defaults    requirett/g&#x27; /etc/sudoers
 <span class="hljs-meta">
-#</span><span class="bash"> Unzip the downloaded DolphinScheduler binary package to the specified directory, such as creating /opt/dolphinscheduler, and rename the unzipped file name</span>
-tar -zxvf apache-dolphinscheduler-2.0.1-bin.tar.gz -C /opt/dolphinscheduler
-mv apache-dolphinscheduler-2.0.1-bin  dolphinscheduler-bin
-<span class="hljs-meta">#</span><span class="bash"> Modify directory permissions and grant permissions <span class="hljs-keyword">for</span> user you created above</span>
-chown -R dolphinscheduler:dolphinscheduler dolphinscheduler-bin
+#</span><span class="bash"> Modify directory permissions and grant permissions <span class="hljs-keyword">for</span> user you created above</span>
+chown -R dolphinscheduler:dolphinscheduler apache-dolphinscheduler-*-bin
 </code></pre>
 <blockquote>
 <p><strong><em>NOTICE:</em></strong></p>
